@@ -64,10 +64,10 @@ class DATABASE_CONFIG {
 	public $default = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
-		'host' => 'mysql15.000webhost.com',
-		'login' => 'a8534205',
-		'password' => 'Winter12',
-		'database' => 'a8534205_magc',
+		'host' => '54.213.149.57',
+		'login' => 'cakedev',
+		'password' => 'Cakedev!',
+		'database' => 'magc',
 		'prefix' => '',
 		//'encoding' => 'utf8',
 	);
