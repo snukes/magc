@@ -64,7 +64,7 @@ class DATABASE_CONFIG {
 	public $default = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
-		'host' => '54.213.149.57',
+		'host' => 'localhost',
 		'login' => 'cakedev',
 		'password' => 'Cakedev!',
 		'database' => 'magc',

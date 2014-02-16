@@ -1,2 +1,2 @@
 INSERT INTO users(username, password)
-    VALUES ('snukes', 'Summer10');
+    VALUES ('snukes', 'Summer10')
