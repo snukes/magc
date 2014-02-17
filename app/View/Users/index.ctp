@@ -29,6 +29,6 @@
 </table>
 
 <?php echo $this->Html->link(
-    'Add Post',
-    array('controller' => 'posts', 'action' => 'add'));
+    'Add User',
+    array('controller' => 'users', 'action' => 'add'));
 ?>
