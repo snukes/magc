@@ -1,3 +1,4 @@
+<?php
 class UsersController extends AppController {
     public $helpers = array('Html', 'Form');
 
@@ -5,3 +6,4 @@ class UsersController extends AppController {
         $this->set('users', $this->User->find('all'));
     }
 }
+?>
