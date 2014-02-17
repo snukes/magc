@@ -14,7 +14,7 @@ class User extends AppModel {
         ),
         'password_confirmation' => array(
             'rule' => array('equalToField', 'password'),
-            'message' => 'Passwords do not match')
+            'message' => 'Passwords do not match'
         )
     );
 
