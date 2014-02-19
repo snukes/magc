@@ -5,9 +5,8 @@
     <tr>
         <th>ID</th>
         <th>Username</th>
-        <th>Password</th>
         <th>Email</th>
-        <th>Admin</th>
+        <th>Role</th>
     </tr>
 
     <!-- Looping through $users array, prints out info -->
@@ -18,11 +17,8 @@
         <td>
             <?php echo $this->Html->link($user['User']['username'], array('controller' => 'users', 'action' => 'view', $user['User']['id'])); ?>
         </td>
-        <td><?php echo $user['User']['password']; ?></td>
         <td><?php echo $user['User']['email']; ?></td>
-        <td>
-            <input type="checkbox"  value="yes" <?php echo ($user['User']['admin'] ? "checked" : "" ); ?>>
-        </td>
+        <td><?php echo $user['User']['role']; ?></td>
     <tr>
     <?php endforeach; ?>
     <?php unset($user); ?>

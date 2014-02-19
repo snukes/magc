@@ -2,24 +2,34 @@
 class User extends AppModel {
     public $validate = array(
         'username' => array(
-            'rule' => 'notEmpty',
-            'required' => 'create'
+            'required' => array(
+                'rule' => array('notEmpty'),
+                'message' => 'A username is required'
+            )
         ),
-        'email' => array(
-            'rule' => 'notEmpty',
-            'email' => 'email'
+        'role' => array(
+            'valid' => array(
+                'rule' => array('inList', array('admin','artist','viewer')),
+                'message' => 'Please enter a valid role',
+                'allowEmpty' => false 
+            )
         ),
         'password' => array(
-            'rule' => 'notEmpty'
+            'required' => array(
+                'rule' => array('notEmpty'),
+                'message' => 'A password is required'
+            )    
         ),
-        'password_confirmation' => array(
-            'rule' => array('equalToField', 'password'),
-            'message' => 'Passwords do not match'
-        )
+        'email' => 'email',
     );
 
-    function equalToField($array, $field) {
-        return strcmp($this->data[$this->alias][key($array)], $this->data[$this->alias][$field]) == 0;
+    public function beforeSave($options = array()) {
+        if (isset($this->data[$this->alias]['password'])) {
+            $ph = new SimplePasswordHasher();
+            $this->data[$this->alias]['password'] = $ph->hash($this->data[$this->alias][password]);
+        } 
+        return true;
     }
+
 }
 ?>
