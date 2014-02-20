@@ -13,3 +13,5 @@ endif;
 
 App::uses('Debugger', 'Utility');
 ?>
+
+<h1>Soon to be home of MAGC</h1>
