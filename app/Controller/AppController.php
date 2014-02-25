@@ -35,25 +35,31 @@ class AppController extends Controller {
         'DebugKit.Toolbar',
         'Session',
         'Auth' => array(
-            'loginAction' => array(
-                'controller' => 'users', 
-                'action' => 'login', 'home'
-            ),
             'loginRedirect' => array(
-                'controller' => 'pages',
-                'action' => 'display',
-                'home'
+                'controller' => 'users',
+                'action' => 'index'
             ),
             'logoutRedirect' => array(
                 'controller' => 'pages',
                 'action' => 'display',
                 'home'
-            )
+            ),
+		'authorize' => array('Controller')
         )
     );
 
     public function beforeFilter() {
         $this->Auth->allow('index','view');
+    }
+
+    public function isAuthorized($user) {
+	// If authorized user
+	if (isset($user['role']) && $user['role'] === 'admin') {
+	    return true;
+	}
+
+	// Deny access
+	return false;
     }
 
 }
