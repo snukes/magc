@@ -5,5 +5,5 @@ CREATE TABLE users (
     username VARCHAR(30), 
     password VARCHAR(50),
     email VARCHAR(30),
-    admin VARCHAR(10) DEFAULT 'viewer' 
+    role VARCHAR(10) DEFAULT 'viewer' 
 );

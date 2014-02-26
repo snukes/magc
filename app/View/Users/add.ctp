@@ -13,10 +13,9 @@
             array('options' => array(
                 'admin' => 'Admin', 
                 'artist' => 'Artist', 
-                'viewer' => 'viewer'
-            );
+                'viewer' => 'viewer')
+            ));
         echo $this->Form->input('password');
-        echo $this->Form->input('password_confirmation');
         ?>
     </fieldset>
 <?php echo $this->Form->end(__('Save User')); ?>
