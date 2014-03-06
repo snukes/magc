@@ -4,7 +4,7 @@ class UsersController extends AppController {
 
     public function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allow('index', 'add', 'login', 'logout');
+        $this->Auth->allow('signup', 'login', 'logout');
     }
 
     public function login() {
@@ -37,12 +37,15 @@ class UsersController extends AppController {
         $this->set('user', $user);
     }
 
-    public function add() {
+    public function signup() {
         if ($this->request->is('post')) {
             $this->User->create();
             if ($this->User->save($this->request->data)) {
-                $this->Session->setFlash(__('User has been saved'));
-                return $this->redirect(array('action' => 'index'));
+                $this->Session->setFlash(__('Welcome to JR Hanks'));
+                return $this->redirect(array('controller' => 'pages',
+					     'action' => 'display',
+					     'home' 
+					    ));
             }
             $this->Session->setFlash(__('Unable to add user. Please try again.'));
         }

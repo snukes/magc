@@ -13,4 +13,5 @@
         ?>
     </fieldset>
 <?php echo $this->Form->end(__('Login')); ?>
+<p>Not a member? <?php echo $this->Html->link('Sign Up', array('controller' => 'users', 'action' => 'signup')); ?> today!</p>
 </div>
