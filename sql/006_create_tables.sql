@@ -11,7 +11,7 @@ USE `magc` ;
 DROP TABLE IF EXISTS `magc`.`artists` ;
 
 CREATE  TABLE IF NOT EXISTS `magc`.`artists` (
-  `id` INT NOT NULL ,
+  `id` INT NOT NULL AUTO_INCREMENT ,
   `first_name` VARCHAR(30) NULL ,
   `last_name` VARCHAR(30) NULL ,
   `location` VARCHAR(30) NULL ,
@@ -28,7 +28,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `magc`.`artworks` ;
 
 CREATE  TABLE IF NOT EXISTS `magc`.`artworks` (
-  `id` INT NOT NULL ,
+  `id` INT NOT NULL AUTO_INCREMENT ,
   `title` VARCHAR(30) NULL ,
   `description` VARCHAR(500) NULL ,
   `artwork_medium` VARCHAR(30) NULL ,
@@ -54,7 +54,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `magc`.`shopping_carts` ;
 
 CREATE  TABLE IF NOT EXISTS `magc`.`shopping_carts` (
-  `id` INT NOT NULL ,
+  `id` INT NOT NULL AUTO_INCREMENT ,
   PRIMARY KEY (`id`) )
 ENGINE = InnoDB;
 
@@ -65,7 +65,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `magc`.`users` ;
 
 CREATE  TABLE IF NOT EXISTS `magc`.`users` (
-  `id` INT NOT NULL ,
+  `id` INT NOT NULL AUTO_INCREMENT ,
   `username` VARCHAR(20) NULL ,
   `first_name` VARCHAR(30) NULL ,
   `last_name` VARCHAR(30) NULL ,
