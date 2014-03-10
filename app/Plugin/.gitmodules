@@ -7,3 +7,6 @@
 [submodule "search"]
 	path = search
 	url = git://github.com/cakedc/search.git
+[submodule "utils"]
+	path = utils
+	url = git://github.com/cakedc/utils.git
