@@ -32,30 +32,40 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
     public $components = array(
-        'DebugKit.Toolbar',
-        'Session',
         'Auth' => array(
-            'logoutRedirect' => array(
-                'controller' => 'pages',
-                'action' => 'display',
-                'home'
-            ),
-		'authorize' => array('Controller')
-        )
+            'authenticate' => array(
+                'Form' => array(
+                    'fields' => array(
+                        'username' => 'email',
+                        'password' => 'password'),
+                    'userModel' => 'Users.User',
+                    'scope' => array(
+                        'User.active' => 1,
+                        'User.email_verified' => 1)))),
+        'DebugKit.Toolbar',
+        'Cart.CartManager'
     );
 
     public function beforeFilter() {
-        $this->Auth->allow('display');
+        $this->_setupAuth();
+        $this->set('userData', $this->Auth->user());
     }
 
-    public function isAuthorized($user) {
-	// If authorized user
-	if (isset($user['role']) && $user['role'] === 'admin') {
-	    return true;
-	}
+    protected function _setupAuth() {
+        if (!is_null(Configure::read('Users.allowRegistration')) && !Configure::read('Users.allowRegistration')) {
+            $this->Auth->deny('add');
+        }
+        if ($this->request->action == 'register') {
+            $this->Components->disable('Auth');
+        }
 
-	// Deny access
-	return false;
+        if ($this->request->action == 'login') {
+            $this->Auth->autoRedirect = false;
+        }
+
+        $this->Auth->loginRedirect = '/';
+        $this->Auth->logoutRedirect = array('plugin' => 'users', 'controller' => 'users', 'action' => 'login');
+        $this->Auth->loginAction = array('admin' => false, 'plugin' => 'users', 'controller' => 'users', 'action' => 'login');
     }
 
 }
