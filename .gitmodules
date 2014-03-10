@@ -1,0 +1,9 @@
+[submodule "Plugin/Cart"]
+	path = Plugin/Cart
+	url = git://github.com/burzum/Cart.git
+[submodule "Plugin/Search"]
+	path = Plugin/Search
+	url = git://github.com/cakedc/search.git
+[submodule "Plugin/Users"]
+	path = Plugin/Users
+	url = git://github.com/CakeDC/users.git
