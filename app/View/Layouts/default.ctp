@@ -37,9 +37,9 @@
         <div id="header">
             <?php
             if ($this->Session->read('Auth')) {
-                echo $this->Html->link('Logout', array('controller'=>'users', 'action'=>'logout'));
+                echo $this->Html->link('Logout', array('plugin' => 'users', 'controller'=>'users', 'action'=>'logout'));
             } else {
-                echo $this->Html->link('Login/Sign-Up', array('controller'=>'users', 'action'=>'login'));
+                echo $this->Html->link('Login/Sign-Up', array('plugin' => 'users', 'controller'=>'users', 'action'=>'login'));
             }
             ?>
         </div>

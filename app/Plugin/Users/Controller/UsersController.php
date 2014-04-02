@@ -834,6 +834,8 @@ class UsersController extends UsersAppController {
  * @link http://book.cakephp.org/2.0/en/core-utility-libraries/email.html
  */
 	protected function _getMailInstance() {
+		return new CakeEmail('gmail');
+
 		$emailConfig = Configure::read('Users.emailConfig');
 		if ($emailConfig) {
 			return new CakeEmail($emailConfig);

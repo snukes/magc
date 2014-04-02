@@ -1,3 +1,5 @@
+
+x
 <?php
 /**
  * This file is loaded automatically by the app/webroot/index.php file after core.php
@@ -89,7 +91,8 @@ Configure::write('Dispatcher.filters', array(
 	'AssetDispatcher',
 	'CacheDispatcher'
 ));
-
+Configure::write('Users.emailConfig', 'gmail');
+Configure::write('App.defaultEmail', 'magctest@gmail.com');
 /**
  * Configures default file logging options
  */
