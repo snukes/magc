@@ -43,7 +43,6 @@ class AppController extends Controller {
                         'User.active' => 1,
                         'User.email_verified' => 1)))),
         'DebugKit.Toolbar',
-        'Cart.CartManager'
     );
 
     public function beforeFilter() {
