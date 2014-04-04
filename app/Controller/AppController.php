@@ -42,7 +42,7 @@ class AppController extends Controller {
                     'scope' => array(
                         'User.active' => 1,
                         'User.email_verified' => 1)))),
-        'DebugKit.Toolbar',
+        'DebugKit.Toolbar'
     );
 
     public function beforeFilter() {
