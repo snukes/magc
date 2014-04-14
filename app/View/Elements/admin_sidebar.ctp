@@ -13,5 +13,9 @@
 		<li>Staff Members</li>
 		<li><?php echo $this->Html->link(__d('staffs', 'List Staff'), array('admin' => true, 'plugin'=>false, 'controller'=>'staffs', 'action'=>'admin_index')); ?></li>
 		<li><?php echo $this->Html->link(__d('staffs', 'Add Staff Member'), array('admin' => true,'plugin'=>false, 'controller'=>'staffs', 'action'=>'admin_add')); ?></li>
+		<li>&nbsp;</li>
+        <li>Academic Programs</li>
+		<li><?php echo $this->Html->link(__d('programs', 'List Programs'), array('admin' => true, 'plugin'=>false, 'controller'=>'programs', 'action'=>'admin_index')); ?></li>
+		<li><?php echo $this->Html->link(__d('programs', 'Add Program'), array('admin' => true,'plugin'=>false, 'controller'=>'programs', 'action'=>'admin_add')); ?></li>
 	</ul>
 </div>

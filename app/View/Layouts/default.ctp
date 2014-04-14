@@ -54,8 +54,21 @@
                 <p>
                     Admin:&nbsp;
                     <?php echo $this->Html->link(__('Users'), array(
+                        'admin' => true,
                         'plugin' => 'users',
                         'controller' => 'users',
+                        'action' => 'admin_index'));
+                    ?>
+                    &nbsp;|&nbsp;
+                    <?php echo $this->Html->link(__('Staff'), array(
+                        'admin' => true,
+                        'controller' => 'staffs',
+                        'action' => 'admin_index'));
+                    ?> 
+                    &nbsp;|&nbsp;
+                    <?php echo $this->Html->link(__('Programs'), array(
+                        'admin' => true,
+                        'controller' => 'programs',
                         'action' => 'admin_index'));
                     ?>
                 </p>
