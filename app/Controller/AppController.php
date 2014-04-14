@@ -32,18 +32,19 @@ App::uses('CakeEmail', 'Network/Email');
  */
 class AppController extends Controller {
     public $components = array(
-        'Auth' => array(
-            'authenticate' => array(
-                'Form' => array(
-                    'fields' => array(
-                        'username' => 'email',
-                        'password' => 'password'),
-                    'userModel' => 'Users.User',
-                    'scope' => array(
-                        'User.active' => 1,
-                        'User.email_verified' => 1)))),
-        'DebugKit.Toolbar'
-    );
+            'Auth' => array(
+                'authenticate' => array(
+                    'Form' => array(
+                        'fields' => array(
+                            'username' => 'email',
+                            'password' => 'password'),
+                        'userModel' => 'Users.User',
+                        'scope' => array(
+                            'User.active' => 1,
+                            'User.email_verified' => 1)))),
+            'DebugKit.Toolbar',
+            'Session'
+            );
 
     public function beforeFilter() {
         $this->_setupAuth();
@@ -67,4 +68,15 @@ class AppController extends Controller {
         $this->Auth->loginAction = array('admin' => false, 'plugin' => 'users', 'controller' => 'users', 'action' => 'login');
     }
 
+    public function isAuthorized($user = null) {
+        if (empty($this->request->params['admin'])) {
+            return true;
+        }
+
+        if (isset($this->request->params['admin'])) {
+            return (bool)($user['is_admin'] === 1);
+        }
+
+        return false;
+    }
 }

@@ -37,11 +37,31 @@
         <div id="header">
             <?php
             if ($this->Session->read('Auth')) {
-                echo $this->Html->link('Logout', array('plugin' => 'users', 'controller'=>'users', 'action'=>'logout'));
+                echo $this->Html->link('Logout', array(
+                    'plugin' => 'users', 
+                    'controller'=>'users', 
+                    'action'=>'logout'));
             } else {
-                echo $this->Html->link('Login/Sign-Up', array('plugin' => 'users', 'controller'=>'users', 'action'=>'login'));
+                echo $this->Html->link('Login/Sign-Up', array(
+                    'plugin' => 'users', 
+                    'controller'=>'users', 
+                    'action'=>'login'));
             }
             ?>
+
+            <?php if (isset($userData['is_admin']) && $userData['is_admin'] == 1): ?>
+            <span style="float:right;">
+                <p>
+                    Admin:&nbsp;
+                    <?php echo $this->Html->link(__('Users'), array(
+                        'plugin' => 'users',
+                        'controller' => 'users',
+                        'action' => 'admin_index'));
+                    ?>
+                </p>
+            </span>
+            <?php endif; ?>
+
         </div>
         <div id="content">
 
