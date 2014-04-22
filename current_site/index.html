@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+    <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+    <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+    <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+    <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+	<head>
+    <!-- Basic Page Needs
+  	=========================================== -->
+		<title>Department of Art and Design | UW-Eau Claire</title>
+		<meta name="Description" id="Description" content="The Department of Art and Design at UW-Eau Claire">
+        	<meta name="Keywords" id="Keywords" content="art, design, Eau Claire, UW-Eau Claire, UWEC, University of Wisconsin-Eau Claire, liberal arts">
+		<meta charset="utf-8">
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,900italic,500italic,700,700italic,900|Roboto+Condensed:400,300,300italic,400italic,700,700italic|Roboto+Slab:400,300,700,100' rel='stylesheet' type='text/css'>
+        
+		<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    	<!-- Responsive Slides
+  ================================================== -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+	<script src="responsiveslides.min.js"></script>	
+    <script>
+	$(".rslides").responsiveSlides({
+  auto: true,             // Boolean: Animate automatically, true or false
+  speed: 500,            // Integer: Speed of the transition, in milliseconds
+  timeout: 4000,          // Integer: Time between slide transitions, in milliseconds
+  pager: false,           // Boolean: Show pager, true or false
+  nav: true,             // Boolean: Show navigation, true or false
+  random: false,          // Boolean: Randomize the order of the slides, true or false
+  pause: false,           // Boolean: Pause on hover, true or false
+  pauseControls: true,    // Boolean: Pause when hovering controls, true or false
+  prevText: "Previous",   // String: Text for the "previous" button
+  nextText: "Next",       // String: Text for the "next" button
+  maxwidth: "",           // Integer: Max-width of the slideshow, in pixels
+  navContainer: "",       // Selector: Where controls should be appended to, default is after the 'ul'
+  manualControls: "",     // Selector: Declare custom pager navigation
+  namespace: "rslides",   // String: Change the default namespace used
+  before: function(){},   // Function: Before callback
+  after: function(){}     // Function: After callback
+});
+	</script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script>
+        $(function() {
+            var pull         = $('#mobile-nav-button');
+                pullopen     = $('.mobile-nav-open');
+                menu         = $('nav ul');
+                menuHeight    = menu.height();
+                banner        = $('.banner');
+                wrap          = $('.wrap');
+
+
+            $(pull).on('click', function(e) {
+                e.preventDefault();
+
+                menu.slideToggle();
+                banner.toggleClass('mobile-banner-expand');
+            });
+
+
+            $(window).resize(function(){
+                var w = $(window).width();
+                if(w > 320 && menu.is(':hidden')) {
+                    menu.removeAttr('style');
+                }
+            });
+
+        });
+  </script>
+		
+		<!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" href="stylesheets/ResponsiveGrid/stylesheets/base.css">
+	<link rel="stylesheet" href="stylesheets/ResponsiveGrid/stylesheets/skeleton.css">
+	<link rel="stylesheet" href="stylesheets/ResponsiveGrid/stylesheets/layout.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/menu.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/header.css">
+
+    
+    <!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js">			        </script>
+	<![endif]-->
+		
+	</head>
+	
+	<body>
+    	<div class="container">
+   			<div class="wrap">
+			
+				<div class="header"><!-- header -->
+					<div class="accentWrapper"><h2 class="accent">University of Wisconsin - Eau Claire</h2></div>
+					<div class="banner">
+						<img src="assets/images/real_seal.png" class="logo"/> 
+						<div id="title">
+              <h1 class="headerText">Art & Design</h1>
+              <a href="#" id="mobile-nav-button">Menu</a>
+            </div>
+            
+						<hr>
+						<nav class="cl-effect-1">
+							<ul id="main-menu">
+								<li class="current-menu-item first"><a href="index.html">Home</a></li>
+								<li class="nav-expand"><a href="academicPrograms.html">Academic Programs</a></li>
+                <li class="nav-shrink"><a href="academicPrograms.html">Programs</a></li>
+								<li class="nav-expand"><a href="falcultyAndStaff.html">Faculty and Staff</a></li>
+                <li class="nav-shrink"><a href="falcultyAndStaff.html">Faculty</a></li>
+                <li class="nav-expand"><a href="fosterGallery">Foster Gallery</a></li>
+                <li class="nav-shrink"><a href="fosterGallery">Gallery</a></li>
+								<li class="last"><a href="studentWorks">Student Works</a></li> 
+							</ul>  
+						</nav>
+					</div>   
+        </div><!-- end header -->
+                
+        <ul class="rslides">
+            <li><img src="assets/images/haas.jpg" alt=""></li>
+            <li><img src="assets/images/haaslol.jpg" alt=""></li>
+				</ul>
+                
+        <hr class="content-separator">    
+				<div class="content">
+
+                  <div class="three columns offset-by-one">
+                    <a href="index.html">About</a>
+                         <hr/>
+                         <a href="Xtra/alumni.html">Alumni</a>
+                         <hr/>
+                         <a href="Xtra/fieldTrips.html">Field Trips</a>
+                         <hr/>
+                         <a href="Xtra/studentOrgs.html">Student Organizations</a>
+                         <hr/>
+                         <a href="Xtra/facilities.html">Facilities</a> 
+                         <hr/>
+                  </div>
+                    
+                	<div class="ten columns offset-by-two">
+                        <h4>
+                            <!-- work on text heirarchy - weight and size -->
+                            The Department of Art & Design embraces its responsibility as an integral component of a public liberal arts institution and of our local and regional communities. 			</h4>
+                        <h5>
+                        Our programs advance the university’s mission and its Liberal Education learning goals. Our diverse and inclusive curriculum in the visual arts promotes a body of knowledge that serves individual needs, stimulates the eyes, and challenges the minds of all our students. To support our contemporary and comprehensive visual arts program, we endorse these requirements:
+                        </h5>
+                        <li>coordinated foundations core </li>
+                        <li>depth of knowledge and skill in an area of emphasis</li>
+                        <li>experience with art in two and three dimensions</li>
+                        <li>exploration of a variety of media</li>
+                        <li>knowledge of the theories and global history of art</li>
+                        <li>participation in the national and international contemporary art world, and
+                        employment of imagination, creativity, and innovation </li>
+                        <br/>
+                        <br/>
+                        <br/>
+                  </div>
+        </div> <!-- end of content-->
+                 
+                    
+        <div class="footerWrapper">
+            <div class="footer">
+                  <div class="sixteen columns">
+                        Art and Design ~ Haas Fine Arts Center 104 University of Wisconsin - Eau Claire Eau Claire WI 54702 - 4004
+                  </div>
+            </div>
+        </div> <!-- end footer -->
+
+      </div>  
+	</div>
+</div>
+
+<script src="js/classie.js"></script>
+<script src="js/header.js"></script>
+</body>
+</html>

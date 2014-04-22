@@ -1,0 +1,142 @@
+/* Larger than standard 960 */
+@media only screen and (min-width: 960px) {
+	.header {
+		width:960px;
+	}
+	#mobile-nav-button {
+		display: none;		
+	}
+}
+
+
+
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {
+	.header {
+		width:960px;
+	}
+	#mobile-nav-button {
+		display: none;		
+	}
+}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	.header {
+		width:768px;
+	}
+	#mobile-nav-button {
+		display: none;		
+	}
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+	.wrap {
+		margin-top:100px;
+	}
+	.header {
+		width:420px;
+		height: auto;
+		min-height:100px;
+	}
+
+	.logo {
+		width: 60px;
+		height: 65px;
+	}
+
+	.headerText {
+		font-size: 30px;
+		padding:25px 0 10px 20px;
+
+	}
+	#mobile-nav-button {
+		display: inline;		
+	}
+	.banner hr {
+		display: none;
+	}
+	.banner.mobile-banner-expand {
+		overflow: visible;
+		background-color: #FFF;
+	}
+	nav {   
+    	height: auto;  
+    	border-bottom: 0;  
+	}  
+	nav #main-menu {  
+    	display: none;  
+    	height: auto;  
+	}  
+	nav a#mobile-nav-button {  
+    	display: block; 
+    	float:left;
+    	background-color:#036;  
+    	width: 100%;  
+    	position: relative;  	
+	}  
+	nav a#mobile-nav-button:after {  
+    	content:"";  
+    	background: url('Images/nav-icon.png') no-repeat;  
+    	width: 30px;  
+    	height: 30px;  
+    	display: inline-block;  
+    	position: absolute;  
+    	right: 15px;  
+    	top: 10px; 
+    	float:right; 
+	}  
+	nav #main-menu li {
+		width: 100%;
+	}
+
+	#main-menu li a {
+		margin-left: 0;
+	}
+	.header.header-shrink {
+		min-height: 0;
+    	height: 60px;
+    	overflow: visible;
+	}
+	.header.header-shrink .headerText {
+		margin-bottom: 11px;
+    	padding: 18px 0 10px 20px;
+	}
+	.header.header-shrink  #title {
+		width: 100%;
+	}
+	.header.header-shrink .banner.mobile-banner-expand #main-menu {
+		background-color: #C7C7C7;
+	}
+	.header.header-shrink nav {
+		margin-left: 0;
+	}
+	.header.header-shrink nav #main-menu li {
+		width: 100%;
+	}
+	.header.header-shrink nav #main-menu li a {
+		margin-left: 0;
+	}
+	.header.header-shrink nav #main-menu li {
+		margin-top: 0;
+		margin-bottom: 12px;
+	}
+
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	.header {
+		width:420px;
+	}
+
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+	.header {
+		width:300px;
+	}
+}
+	
