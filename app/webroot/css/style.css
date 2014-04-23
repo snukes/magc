@@ -29,13 +29,11 @@ body{
     transition: height 0.3s;
 
 }
-
 .accentWrapper{
 	height: 30px;
 	background: #C0C0C0;
 	width: 100%;
 }
-
 .accent{
 	font-family: "roboto";
 	font-weight: 900;
@@ -47,7 +45,6 @@ body{
 	overflow: hidden;
 	line-height: 21px;
 }
-
 .banner{
 	margin: 0 auto;
 	padding: 0;
@@ -68,7 +65,19 @@ body{
 	padding:15px 0 10px 20px;
 }
 #mobile-nav-button {
-	float: right;
+  	position: relative;
+  	float: right;
+  	text-decoration: none;
+  	margin-right: 15px;
+	display: none;		
+}
+#mobile-nav-button #dark-menu{
+	opacity: 0.8;
+  	margin-top: 22px;
+}
+#mobile-nav-button #light-menu {
+	display: none;
+  	margin-top: 17px;
 }
 .headerText, .logo, nav ul li a{
 	-webkit-transition: all 0.1s;
@@ -79,32 +88,34 @@ body{
     height: 75px;
 	background-color:#c7c7c7;
 }
-
 .header.header-shrink .accentWrapper,
 .header.header-shrink  hr{
     display: none;
 }
-
 .header.header-shrink  .headerText{
     font-size:25px;
 	color:#FFF;
 }
-
-.header.header-shrink  nav,
-.header.header-shrink  #title {
+.header.header-shrink nav,
+.header.header-shrink #title {
     display:inline;
 	float:left;
 }
-
-.header.header-shrink  .headerText {
+.header.header-shrink .headerText {
 	padding:25px 0 10px 20px;
+}
+.header.header-shrink #mobile-nav-button #dark-menu {
+	display: none;
+}
+.header.header-shrink #mobile-nav-button #light-menu {
+	display: inline-block;
+}
+.header.header-shrink  nav{
+	margin-left:25px;
 }
 .header.header-shrink  nav ul li{
 	margin-top: 31px;
 	margin-bottom: 20px;
-}
-.header.header-shrink  nav{
-	margin-left:25px;
 }
 .header.header-shrink  .logo{
 	display:none;
@@ -126,13 +137,26 @@ body{
 .content hr {
 	margin-bottom: 20px;
 }
-
+h1 {
+	font-size: 36px;
+}
+.content ul {
+		list-style-type: circle;
+		padding-left: 25px;
+}
 
 
 /** End Sidebar **/
 
+/* Footer */
 
+.footer {
+	text-align: center;
+	font-family: "roboto";
+	line-height: 10pt;
+}
 
+/** End Footer **/
 .content{
 	font-family: "roboto slab";
 	font-weight: 300;
@@ -150,26 +174,32 @@ body{
 	padding-top: 10px;
 }
 
+.ten.columns {
+	margin-bottom: 50px;
+}
+
 /* End Content */
 
 
 
 .footerWrapper{
-	position: fixed;
-	bottom: 0;
-	height: 30px;
-	background: #C0C0C0;
+	position: relative;
+	height: auto;
+	background-color: #222;
 }
 .footer{
+	position: relative;
 	font-family: serif;
 	font-size: 12px;
-	letter-spacing: 5px;
+	letter-spacing: 2px;
 	margin: 0 auto;
-	padding: 5px 15px 5px 5px;
+	padding: 35px 0;
 	overflow: hidden;
 	width: 100%;	
 }
-
+.footer .sixteen.columns {
+	margin: 0;
+}
 .rslides {
   position: relative;
   list-style: none;
