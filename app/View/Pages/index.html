@@ -9,15 +9,14 @@ if (!Configure::read('debug')):
 throw new NotFoundException();
 endif;
 
-App::uses('Debugger', 'Utility');
+App::users('Debugger', 'Utility');
 ?>
 
-<ul class="rslides">
-    <li><?php echo $this->Html->image('haas.jpg', array('alt' => 'Haas'))?></li>
-    <li><?php echo $this->Html->image('haaslol.jpg', array('alt' => 'Haas Lol'))?></li>
-</ul>
-
 <hr class="content-separator">    
+<ul class="rslides">
+    <li><img src="assets/images/haas.jpg" alt=""></li>
+    <li><img src="assets/images/haaslol.jpg" alt=""></li>
+</ul>
 
 <div class="three columns offset-by-one">
     <a href="index.html">About</a>

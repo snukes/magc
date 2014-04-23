@@ -1,0 +1,203 @@
+@charset "utf-8";
+/* CSS Document*/
+
+body{
+	background: #F8F8FF;
+	color: #FFFFFF;
+}
+
+.wrap {
+	margin-top:200px;
+}
+
+.container {
+	background-color:#FFF;
+	overflow:hidden;
+}
+
+/* Header Styles */
+.header {
+	position:fixed;
+	z-index: 1000;
+	top:0;
+	height:200px;
+	background-color: #FFF;
+	
+	overflow: hidden;
+    -webkit-transition: height 0.3s;
+    -moz-transition: height 0.3s;
+    transition: height 0.3s;
+
+}
+
+.accentWrapper{
+	height: 30px;
+	background: #C0C0C0;
+	width: 100%;
+}
+
+.accent{
+	font-family: "roboto";
+	font-weight: 900;
+	font-size: 12px;
+	color: #f8f8ff;
+	letter-spacing: 5px;
+	margin: 0 auto;
+	padding: 5px 15px 5px 15px;
+	overflow: hidden;
+	line-height: 21px;
+}
+
+.banner{
+	margin: 0 auto;
+	padding: 0;
+	overflow: hidden;
+}
+.headerText{
+	font-family: "roboto slab";
+	font-weight: 300;
+	font-size: 48px;
+	color: #666;
+	line-height:21px;
+
+	padding:35px 0 10px 20px;
+	display: inline-block;
+}
+.logo{
+	float: left;
+	padding:15px 0 10px 20px;
+}
+#mobile-nav-button {
+	float: right;
+}
+.headerText, .logo, nav ul li a{
+	-webkit-transition: all 0.1s;
+    -moz-transition: all 0.1s;
+    transition: all 0.1s;
+}
+.header.header-shrink {
+    height: 75px;
+	background-color:#c7c7c7;
+}
+
+.header.header-shrink .accentWrapper,
+.header.header-shrink  hr{
+    display: none;
+}
+
+.header.header-shrink  .headerText{
+    font-size:25px;
+	color:#FFF;
+}
+
+.header.header-shrink  nav,
+.header.header-shrink  #title {
+    display:inline;
+	float:left;
+}
+
+.header.header-shrink  .headerText {
+	padding:25px 0 10px 20px;
+}
+.header.header-shrink  nav ul li{
+	margin-top: 31px;
+	margin-bottom: 20px;
+}
+.header.header-shrink  nav{
+	margin-left:25px;
+}
+.header.header-shrink  .logo{
+	display:none;
+}
+.header.header-shrink .nav-shrink {
+	display: inline;
+}
+.header.header-shrink .nav-expand {
+	display: none;
+}
+
+/* End Header */
+
+
+
+/* Content */
+
+/** Sidebar **/
+.content hr {
+	margin-bottom: 20px;
+}
+
+
+
+/** End Sidebar **/
+
+
+
+.content{
+	font-family: "roboto slab";
+	font-weight: 300;
+	background-color: #FFF;
+	color: #000000;
+	overflow: hidden;
+}
+
+.content-separator {
+	margin: 15px 0 20px;
+}
+
+.txtPadding{
+	padding-left: 15px;
+	padding-top: 10px;
+}
+
+/* End Content */
+
+
+
+.footerWrapper{
+	position: fixed;
+	bottom: 0;
+	height: 30px;
+	background: #C0C0C0;
+}
+.footer{
+	font-family: serif;
+	font-size: 12px;
+	letter-spacing: 5px;
+	margin: 0 auto;
+	padding: 5px 15px 5px 5px;
+	overflow: hidden;
+	width: 100%;	
+}
+
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  }
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+  }

@@ -1,90 +1,96 @@
-<?php
-/**
- *
- *
- * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- *
- * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link          http://cakephp.org CakePHP(tm) Project
- * @package       app.View.Layouts
- * @since         CakePHP(tm) v 0.10.0.1076
- * @license       http://www.opensource.org/licenses/mit-license.php MIT License
- */
-
-?>
 <!DOCTYPE html>
-<html>
-<head>
-    <?php echo $this->Html->charset(); ?>
-    <title>MAGC</title>
-    <?php
-    echo $this->Html->meta('icon');
+    <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+    <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+    <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+    <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+    <head>
+    <!-- Basic Page Needs
+    =========================================== -->
+        <title>Department of Art and Design | UW-Eau Claire</title>
+        <meta name="Description" id="Description" content="The Department of Art and Design at UW-Eau Claire">
+            <meta name="Keywords" id="Keywords" content="art, design, Eau Claire, UW-Eau Claire, UWEC, University of Wisconsin-Eau Claire, liberal arts">
+        <meta charset="utf-8">
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,900italic,500italic,700,700italic,900|Roboto+Condensed:400,300,300italic,400italic,700,700italic|Roboto+Slab:400,300,700,100' rel='stylesheet' type='text/css'>
 
-    echo $this->Html->css('cake.generic');
+        <!-- Mobile Specific Metas
+  ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    echo $this->fetch('meta');
-    echo $this->fetch('css');
-    echo $this->fetch('script');
-    ?>
-</head>
-<body>
-    <div id="container">
-        <div id="header">
-            <?php
-            if ($this->Session->read('Auth')) {
-                echo $this->Html->link('Logout', array(
-                    'plugin' => 'users', 
-                    'controller'=>'users', 
-                    'action'=>'logout'));
-            } else {
-                echo $this->Html->link('Login/Sign-Up', array(
-                    'plugin' => 'users', 
-                    'controller'=>'users', 
-                    'action'=>'login'));
-            }
-            ?>
+        <!-- Responsive Slides
+  ================================================== -->
+<?php 
+echo $this->Html->script('https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js', array('inline' => false));
+echo $this->Html->script('responsiveslides.min');
+echo $this->Html->script('responsiveslides');
+echo $this->Html->script('navbar');
+?>	
+        <!-- CSS
+  ================================================== -->
+<?php
+echo $this->Html->css('ResponsiveGrid/stylesheets/base');
+echo $this->Html->css('ResponsiveGrid/stylesheets/skeleton');
+echo $this->Html->css('ResponsiveGrid/stylesheets/layout');
+echo $this->Html->css('menu');
+echo $this->Html->css('font-awesome');
+echo $this->Html->css('style');
+echo $this->Html->css('header');
+?>
 
-            <?php if (isset($userData['is_admin']) && $userData['is_admin'] == 1): ?>
-            <span style="float:right;">
-                <p>
-                    Admin:&nbsp;
-                    <?php echo $this->Html->link(__('Users'), array(
-                        'admin' => true,
-                        'plugin' => 'users',
-                        'controller' => 'users',
-                        'action' => 'admin_index'));
-                    ?>
-                    &nbsp;|&nbsp;
-                    <?php echo $this->Html->link(__('Staff'), array(
-                        'admin' => true,
-                        'controller' => 'staffs',
-                        'action' => 'admin_index'));
-                    ?> 
-                    &nbsp;|&nbsp;
-                    <?php echo $this->Html->link(__('Programs'), array(
-                        'admin' => true,
-                        'controller' => 'programs',
-                        'action' => 'admin_index'));
-                    ?>
-                </p>
-            </span>
-            <?php endif; ?>
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js">			        </script>
+    <![endif]-->
 
-        </div>
-        <div id="content">
+    </head>
 
+    <body>
+        <div class="container">
+            <div class="wrap">
+
+                <div class="header"><!-- header -->
+                    <div class="accentWrapper"><h2 class="accent">University of Wisconsin - Eau Claire</h2></div>
+                    <div class="banner">
+                        <?php echo $this->Html->image('real_seal.png', array('class' => 'logo', 'alt' => 'Seal'))?>
+                        <div id="title">
+                        <h1 class="headerText">Art & Design</h1>
+                        <a href="#" id="mobile-nav-button">Menu</a>
+                    </div>                    
+
+                        <hr>
+                    <nav class="cl-effect-1">
+                        <ul id="main-menu">
+                            <li class="current-menu-item first"><a href="index.html">Home</a></li>
+                            <li class="nav-expand"><a href="academicPrograms.html">Academic Programs</a></li>
+                            <li class="nav-shrink"><a href="academicPrograms.html">Programs</a></li>
+                            <li class="nav-expand"><a href="falcultyAndStaff.html">Faculty and Staff</a></li>
+                            <li class="nav-shrink"><a href="falcultyAndStaff.html">Faculty</a></li>
+                            <li class="nav-expand"><a href="fosterGallery">Foster Gallery</a></li>
+                            <li class="nav-shrink"><a href="fosterGallery">Gallery</a></li>
+                            <li class="last"><a href="studentWorks">Student Works</a></li> 
+                        </ul>  
+                    </nav>
+               </div>   
+        </div><!-- end header -->
+
+        <div class="content">
             <?php echo $this->Session->flash(); ?>
-
             <?php echo $this->fetch('content'); ?>
-        </div>
-        <div id="footer">
-        </div>
+        </div> <!-- end of content-->
+
+
+        <div class="footerWrapper">
+            <div class="footer">
+                  <div class="sixteen columns">
+                        Art and Design ~ Haas Fine Arts Center 104 University of Wisconsin - Eau Claire Eau Claire WI 54702 - 4004
+                  </div>
+            </div>
+        </div> <!-- end footer -->
+
+      </div>  
     </div>
-    <?php echo $this->element('sql_dump'); ?>
+</div>
+<?php
+echo $this->Html->script('classie');
+echo $this->Html->script('header');
+?>    
 </body>
 </html>
