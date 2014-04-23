@@ -52,7 +52,10 @@ echo $this->Html->css('header');
                         <?php echo $this->Html->image('real_seal.png', array('class' => 'logo', 'alt' => 'Seal'))?>
                         <div id="title">
                         <h1 class="headerText">Art & Design</h1>
-                        <a href="#" id="mobile-nav-button">Menu</a>
+                        <a href="#" id="mobile-nav-button">
+                            <img id="dark-menu" width='25px' height='25px' src="assets/images/burger.png">
+                            <img id="light-menu" width='25px' height='25px' src="assets/images/burger_white.png">
+                        </a>
                     </div>                    
 
                         <hr>
@@ -79,9 +82,9 @@ echo $this->Html->css('header');
 
         <div class="footerWrapper">
             <div class="footer">
-                  <div class="sixteen columns">
-                        Art and Design ~ Haas Fine Arts Center 104 University of Wisconsin - Eau Claire Eau Claire WI 54702 - 4004
-                  </div>
+                <div class="sixteen columns">Art and Design • Haas Fine Arts Center 104 • University of Wisconsin-Eau Claire<br />Eau Claire WI 54702-4004 <br /><br />
+Phone: 715-836-3277<br />Questions/Comments: art@uwec.edu<br /><br />
+Copyright © 2014 UW-Eau Claire and the Board of Regents of the University of Wisconsin System</div>
             </div>
         </div> <!-- end footer -->
 
