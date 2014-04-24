@@ -140,7 +140,7 @@ body{
 h1 {
 	font-size: 36px;
 }
-.content ul {
+.content .ten.columns ul {
 		list-style-type: circle;
 		padding-left: 25px;
 }
