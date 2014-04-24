@@ -54,7 +54,7 @@ echo $this->Html->css('header');
                         <h1 class="headerText">Art & Design</h1>
                         <a href="#" id="mobile-nav-button">
                             <?php echo $this->Html->image('burger.png', array('id' => 'dark-menu','width' => '25px', 'height' => '25px'))?>
-                            <?php echo $this->Html->image('burger-white.png', array('id' => 'light-menu','width' => '25px', 'height' => '25px'))?>
+                            <?php echo $this->Html->image('burger_white.png', array('id' => 'light-menu','width' => '25px', 'height' => '25px'))?>
                         </a>
                     </div>                    
 
