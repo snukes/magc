@@ -19,7 +19,7 @@
         <!-- Responsive Slides
   ================================================== -->
 <?php 
-echo $this->Html->script('https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js', array('inline' => false));
+echo $this->Html->script('jquery-1.8.3.min.js');
 echo $this->Html->script('responsiveslides.min');
 echo $this->Html->script('responsiveslides');
 echo $this->Html->script('navbar');
