@@ -7,7 +7,7 @@ App::uses('AppController', 'Controller');
 class StaffsController extends AppController {
 	public function beforeFilter() {
 		parent::beforeFilter();
-		$this->Auth->allow('*');
+		$this->Auth->allow('index', 'add');
 	}
 
 	public function index() {

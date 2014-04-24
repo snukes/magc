@@ -20,15 +20,15 @@ App::uses('Debugger', 'Utility');
 <hr class="content-separator">    
 
 <div class="three columns offset-by-one">
-    <a href="index.html">About</a>
+    <a href="/">About</a>
     <hr/>
-    <a href="Xtra/alumni.html">Alumni</a>
+    <a href="alumni">Alumni</a>
     <hr/>
-    <a href="Xtra/fieldTrips.html">Field Trips</a>
+    <a href="field_trips">Field Trips</a>
     <hr/>
-    <a href="Xtra/studentOrgs.html">Student Organizations</a>
+    <a href="student_orgs">Student Organizations</a>
     <hr/>
-    <a href="Xtra/facilities.html">Facilities</a> 
+    <a href="facilities">Facilities</a> 
     <hr/>
 </div>
 

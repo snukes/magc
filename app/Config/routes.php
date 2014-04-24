@@ -29,7 +29,15 @@
  * ...and connect the rest of 'Pages' controller's URLs.
  */
 	Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
-
+	Router::connect('/alumni', array('controller' => 'pages', 'action' => 'display', 'alumni'));
+	Router::connect('/field_trips', array('controller' => 'pages', 'action' => 'display', 'fieldtrips'));
+	Router::connect('/student_orgs', array('controller' => 'pages', 'action' => 'display', 'studentorgs'));
+	Router::connect('/facilities', array('controller' => 'pages', 'action' => 'display', 'facilities'));
+	Router::connect('/foster_gallery', array('controller' => 'pages', 'action' => 'display', 'foster_home'));
+	Router::connect('/student_works', array('controller' => 'pages', 'action' => 'display', 'student_works'));
+	Router::connect('/academic_programs', array('controller' => 'programs', 'action' => 'index'));
+	Router::connect('/faculty_and_staff', array('controller' => 'staffs', 'action' => 'index'));
+        
 /**
  * Load all plugin routes. See the CakePlugin documentation on
  * how to customize the loading of plugin routes.
