@@ -34,37 +34,21 @@ App::uses('Debugger', 'Utility');
 </div>
 
 <div class="ten columns offset-by-two">
-    <span class="content-header"><h1>Student Organizations</h1></span>
-    <h2><a href="http://uwec.orgsync.com/">Art Educators Club</a></h2>
-    <p>The Art Educators Club is open to all Art Education Majors and any individuals interested in art education and volunteer art related activities. There are many advantages to being a member of the Art Educators Club:</p>
-    <ul>
-    	<li>Members get to know other Art Education Majors, Art students, and Art teachers throughout the community.</li>
-		<li>It prepares members for advanced art education classes and for professional teaching positions.</li>
-		<li>Members are able to participate in art related projects at the University and throughout the community (working one-on-one with children, through art).</li>
-		<li>Members are able to advocate art education on campus and throughout the community.</li>
-	</ul>
- 	<p>The club participates in numerous activities throughout the year. Some activities include: field trips, picnics, quest speakers, attending state and national art education conferences, volunteering to teach art lessons at local schools, and etc.</p>
- 	<p>Our major fund-raising activity is catering the gallery openings for the art department's Foster Gallery. The money earned goes toward activities that the whole club chooses to participate in.</p>
- 	<p>Our meetings run every other week. Please see the bulletin board near the Art office for ongoing activities and meeting times.</p>
-
+    <span class="content-header"><h1>Field Trips</h1></span>
+    <p>The Department of Art & Design sponsors annual field trips under faculty supervision to the Twin Cities, Chicago, and New York. These non-required trips offer students an opportunity to visit some of the nation's finest museums and private galleries.</p>
+    <p>The trips are non-profit events to create the opportunity to travel in the least expensive and most direct means to destinations significant for their art museums, galleries, and other art venues. Dependable local companies provide the motor coaches for transportation. Leaders select the hotels, when applicable, based on location, safety, quality, and price. It is not a guided tour. The leaders distribute advice for planning at the organizational meetings before the trip and at the beginning of the trip in the form of a brochure containing the leaders' daily itineraries, maps, and suggestions for food, drink, and art-related events.</p>
+ 	<p>For detailed information, please contact following professors.</p>
+	<p>
+	<strong>Ned Gannon</strong>
+	<br/>
+	(715) 836-2913
+	<br/>
+	E-mail: <a href="mailto:gannonnb@uwec.edu">gannonnb@uwec.edu</a>
  	<p>
-	<strong>President:</strong> Merribeth Schrimpf 
+	<strong>Karen O'Day</strong>
 	<br/>
-	Email: <a href="mailto:schrimmc@uwec.edu">schrimmc@uwec.edu</a>
+	(715) 836-4751
 	<br/>
-	<strong>Vice President:</strong> Cat Mailloux 
-	<br/>
-	Email: <a href="mailto:maillocj@uwec.edu">maillocj@uwec.edu</a>
-	<br/>
-	<strong>Treasurer:</strong> Angela Koch 
-	<br/>
-	Email: <a href="mailto:kocham@uwec.edu">kocham@uwec.edu</a> 
-	<br/>
-	<strong>Secretary:</strong> Marguerite Gilbertson 
-	<br/>
-	Email: <a href="mailto:gilberme@uwec.edu">gilberme@uwec.edu</a> 
-	<br/>
-	<strong>Publicity:</strong> Dalan Hartmann 
-	Email: <a href="mailto:hartmadl@uwec.edu">hartmadl@uwec.edu</a>
+	E-mail: <a href="mailto:odaykm@uwec.edu">odaykm@uwec.edu</a>        
  	</p>   
 </div>
