@@ -1,35 +1,33 @@
-<div class="program view">
-<h2><?php  echo __('Program'); ?></h2>
-<table>	
-    <tr>
-    <td><?php echo __('Id'); ?></td>
-    <td><?php echo h($program['Program']['id']); ?></td>
-    </tr>
+<?php 
+    /**
+      * Programs Index
+      *
+      */
+?>
 
-    <tr>
-    <td><?php echo __('Name'); ?></td>
-    <td><?php echo h($program['Program']['name']); ?></td>
-    </tr>		
+<ul class="rslides">
+    <li><?php echo $this->Html->image('haas.jpg', array('alt' => 'Haas'))?></li>
+    <li><?php echo $this->Html->image('haaslol.jpg', array('alt' => 'Haas Lol'))?></li>
+</ul>
 
-    <tr>
-    <td><?php echo __('Image_path'); ?></dt>
-    <td><?php echo h($program['Program']['image_path']); ?></td>
-    </tr>	
+<hr class="content-separator">
 
-    <tr>
-    <td><?php echo __('Faculty Contact'); ?></dt>
-    <td><?php echo h($program['Program']['faculty_contact']); ?></td>
-    </tr>
-
-    <tr>
-    <td><?php echo __('Catalog Page'); ?></dt>
-    <td><?php echo h($program['Program']['catalog_page']); ?></td>
-    </tr>
-
-    <tr>
-    <td><?php echo __('Description'); ?></dt>
-    <td><?php echo h($program['Program']['description']); ?></td>
-    </tr>
-</table>
+<div class="three columns offset-by-one">
+	<?php foreach ($programs as $p): ?>
+        <?php 
+        if ($p['Program']['id'] === $program['Program']['id']) {
+            echo $this->Html->link($p['Program']['name'], array('action' => 'view', $p['Program']['id']), array('class' => 'selected-program'));
+        } else {
+            echo $this->Html->link($p['Program']['name'], array('action' => 'view', $p['Program']['id']));
+        }
+        ?>
+        <hr>
+    <?php endforeach; ?>    
 </div>
-<?php echo $this->element('admin_sidebar'); ?>
+
+<div class="ten columns offset-by-two">
+    <span class="content-header"><h1><?php echo $program['Program']['name'] ?></h1></span>
+    <p><?php echo $program['Program']['description'] ?></p>
+    <p>For further information of the specific field, please contact the faculty member: <?php echo $program['Program']['faculty_contact'] ?></p>
+    <p>Class Requirements: 2013-2014 Course Catalog p.<?echo $program['Program']['catalog_page'] ?></p>
+</div>

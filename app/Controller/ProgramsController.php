@@ -11,15 +11,15 @@ class ProgramsController extends AppController {
 	}
 
 	public function index() {
-		$this->Program->recursive = 0;
-		$this->set('programs', $this->paginate());
+		$this->set('programs', $this->Program->find('all'));
 	}
 
 	public function view($id = null) {
 		$this->Program->id = $id;
 		if (!$this->Program->exists()) {
 			throw new NotFoundException(__('Invalid Program'));
-		}
+        }
+		$this->set('programs', $this->Program->find('all'));
 		$this->set('program', $this->Program->read(null, $id));
 	}
 

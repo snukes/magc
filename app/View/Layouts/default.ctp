@@ -62,13 +62,13 @@ echo $this->Html->css('header');
                     <nav class="cl-effect-1">
                         <ul id="main-menu">
                             <li class="current-menu-item first"><a href="/">Home</a></li>
-                            <li class="nav-expand"><a href="academic_programs">Academic Programs</a></li>
-                            <li class="nav-shrink"><a href="academic_programs">Programs</a></li>
-                            <li class="nav-expand"><a href="faculty_and_staff">Faculty and Staff</a></li>
-                            <li class="nav-shrink"><a href="faculty_and_staff">Faculty</a></li>
-                            <li class="nav-expand"><a href="foster_gallery">Foster Gallery</a></li>
-                            <li class="nav-shrink"><a href="foster_gallery">Gallery</a></li>
-                            <li class="last"><a href="student_works">Student Works</a></li> 
+                            <li class="nav-expand"><a href="/academic_programs">Academic Programs</a></li>
+                            <li class="nav-shrink"><a href="/academic_programs">Programs</a></li>
+                            <li class="nav-expand"><a href="/faculty_and_staff">Faculty and Staff</a></li>
+                            <li class="nav-shrink"><a href="/faculty_and_staff">Faculty</a></li>
+                            <li class="nav-expand"><a href="/foster_gallery">Foster Gallery</a></li>
+                            <li class="nav-shrink"><a href="/foster_gallery">Gallery</a></li>
+                            <li class="last"><a href="/student_works">Student Works</a></li> 
                         </ul>  
                     </nav>
                </div>   

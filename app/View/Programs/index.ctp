@@ -1,43 +1,25 @@
-<div class="program index">
-	<h2><?php echo __('Program'); ?></h2>
-	<table>
-	<tr>
-			<th><?php echo $this->Paginator->sort('id'); ?></th>
-			<th><?php echo $this->Paginator->sort('name'); ?></th>
-			<th><?php echo $this->Paginator->sort('image_path'); ?></th>
-			<th><?php echo $this->Paginator->sort('faculty_contact'); ?></th>
-			<th><?php echo $this->Paginator->sort('catalog_page'); ?></th>
-			<th><?php echo $this->Paginator->sort('description'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
-	</tr>
-	<?php
-	foreach ($programs as $program): ?>
-	<tr>
-		<td><?php echo h($program['Program']['id']); ?>&nbsp;</td>
-		<td><?php echo h($program['Program']['name']); ?>&nbsp;</td>
-		<td><?php echo h($program['Program']['image_path']); ?>&nbsp;</td>
-		<td><?php echo h($program['Program']['faculty_contact']); ?>&nbsp;</td>
-		<td><?php echo h($program['Program']['catalog_page']); ?>&nbsp;</td>
-		<td><?php echo h($program['Program']['description']); ?>&nbsp;</td>
-		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'admin_view', $program['Program']['id'])); ?>
-		</td>
-	</tr>
-<?php endforeach; ?>
-	</table>
-	<p>
-	<?php
-	echo $this->Paginator->counter(array(
-	'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
-	));
-	?>	</p>
+<?php 
+    /**
+      * Programs Index
+      *
+      */
+?>
 
-	<div class="paging">
-	<?php
-		echo $this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'prev disabled'));
-		echo $this->Paginator->numbers(array('separator' => ''));
-		echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'next disabled'));
-	?>
-	</div>
+<ul class="rslides">
+    <li><?php echo $this->Html->image('haas.jpg', array('alt' => 'Haas'))?></li>
+    <li><?php echo $this->Html->image('haaslol.jpg', array('alt' => 'Haas Lol'))?></li>
+</ul>
+
+<hr class="content-separator">
+
+<div class="three columns offset-by-one">
+	<?php foreach ($programs as $p): ?>
+        <?php echo $this->Html->link($p['Program']['name'], array('action' => 'view', $p['Program']['id'])) ?>
+        <hr>
+    <?php endforeach; ?>    
 </div>
-<?php echo $this->element('admin_sidebar'); ?>
+
+<div class="ten columns offset-by-two">
+    <span class="content-header"><h1>Academic Programs</h1></span>
+    <p>From earliest times, human beings have given meaning to life through artistic expressions. In our evolving world, visual awareness and visual communication have become increasingly significant. The Department of Art & Design responds to the needs of a visually-oriented world through instruction in studio art, art history, art education, and the exhibition of art. A variety of programs are offered that lend specific direction and discipline while also allowing students the freedom to explore new avenues of thought and media.</p>
+</div>

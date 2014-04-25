@@ -7,12 +7,11 @@ App::uses('AppController', 'Controller');
 class StaffsController extends AppController {
 	public function beforeFilter() {
 		parent::beforeFilter();
-		$this->Auth->allow('index', 'add');
+		$this->Auth->allow('index', 'view');
 	}
 
 	public function index() {
-		$this->Staff->recursive = 0;
-		$this->set('staff', $this->paginate());
+		$this->set('staff', $this->Staff->find('all'));
 	}
 
 	public function view($id = null) {
@@ -20,6 +19,7 @@ class StaffsController extends AppController {
 		if (!$this->Staff->exists()) {
 			throw new NotFoundException(__('Invalid Staff Member'));
 		}
+		$this->set('staffs', $this->Staff->find('all'));
 		$this->set('staff', $this->Staff->read(null, $id));
 	}
 

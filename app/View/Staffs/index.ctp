@@ -1,65 +1,45 @@
-<div class="staff index">
-	<h2><?php echo __('Staff'); ?></h2>
-	<table>
-	<tr>
-			<th><?php echo $this->Paginator->sort('id'); ?></th>
-			<th><?php echo $this->Paginator->sort('name'); ?></th>
-			<th><?php echo $this->Paginator->sort('title'); ?></th>
-			<th><?php echo $this->Paginator->sort('office'); ?></th>
-			<th><?php echo $this->Paginator->sort('phone'); ?></th>
-			<th><?php echo $this->Paginator->sort('email'); ?></th>
-			<th><?php echo $this->Paginator->sort('image_path'); ?></th>
-			<th><?php echo $this->Paginator->sort('personal_website'); ?></th>
-			<th><?php echo $this->Paginator->sort('personal_work'); ?></th>
-			<th><?php echo $this->Paginator->sort('student_work'); ?></th>
-			<th><?php echo $this->Paginator->sort('description'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
-	</tr>
-	<?php foreach ($staff as $val): ?>
-	<tr>
-		<td><?php echo h($val['Staff']['id']); ?>&nbsp;</td>
-		<td><?php echo h($val['Staff']['name']); ?>&nbsp;</td>
-		<td><?php echo h($val['Staff']['title']); ?>&nbsp;</td>
-		<td><?php echo h($val['Staff']['office']); ?>&nbsp;</td>
-		<td><?php echo h($val['Staff']['phone']); ?>&nbsp;</td>
-		<td><?php echo h($val['Staff']['email']); ?>&nbsp;</td>
-		<td><?php echo h($val['Staff']['image_path']); ?>&nbsp;</td>
-		<td><?php echo h($val['Staff']['personal_website']); ?>&nbsp;</td>
-		<td><?php echo h($val['Staff']['personal_work']); ?>&nbsp;</td>
-		<td><?php echo h($val['Staff']['student_work']); ?>&nbsp;</td>
-		<td><?php echo h($val['Staff']['description']); ?>&nbsp;</td>
-		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $val['Staff']['id'])); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $val['Staff']['id'])); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $val['Staff']['id']), null, __('Are you sure you want to delete # %s?', $val['Staff']['id'])); ?>
-		</td>
-	</tr>
-	<?php
-		unset($val);
-		endforeach; 
-	?>
-	</table>
-	<p>
-	<?php
-	echo $this->Paginator->counter(array(
-	'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
-	));
-	?>	</p>
+<?php 
+    /**
+      * Programs Index
+      *
+      */
+?>
 
-	<div class="paging">
-	<?php
-		echo $this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'prev disabled'));
-		echo $this->Paginator->numbers(array('separator' => ''));
-		echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'next disabled'));
-	?>
-	</div>
-</div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('New Staff'), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add')); ?> </li>
-	</ul>
+<ul class="rslides">
+    <li><?php echo $this->Html->image('haas.jpg', array('alt' => 'Haas'))?></li>
+    <li><?php echo $this->Html->image('haaslol.jpg', array('alt' => 'Haas Lol'))?></li>
+</ul>
+
+<hr class="content-separator">
+
+<div class="three columns offset-by-one">
+	<?php foreach ($staff as $s): ?>
+        <?php echo $this->Html->link($s['Staff']['name'], array('action' => 'view', $s['Staff']['id'])) ?>
+        <hr>
+    <?php endforeach; ?>    
 </div>
 
+<div class="ten columns offset-by-two">
+    <span class="content-header"><h1>Faculty and Staff</h1></span>
+    <p>The Department of Art & Design includes full-time faculty, part-time faculty, visiting artists, educators, and designers. In this particular department, there are 18 members in the team. They have helped shape the curriculum into a vehicle for training students to function in the professional fields they choose. Their teaching is informed and influenced by the hurdles they face in their own creative work, and students benefit from the expertise that comes with finding creative solutions to those struggles.</p>
+
+    <p>
+    <strong>Christos Theo</strong><br/>
+    Department Chair<br/>
+    <br/>
+    Office: HFA Room 104A<br/>
+    Phone: 715-836-3277<br/>
+    Email: <a href="mailto:theocm@uwec.edu">theocm@uwec.edu</a><br/>
+    <br/>
+
+    <strong>Megan Clark</strong><br/>
+    Academic Department Associate<br/>
+    <br/>
+    Office: HFA Room 104<br/>
+    Phone: 715-836-3277<br/>
+    Email: <a href="mailto:clarkmeg@uwec.edu">clarkmeg@uwec.edu</a><br/>
+    <br/>
+
+    </p>    
+
+</div>
