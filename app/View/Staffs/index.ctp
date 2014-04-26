@@ -5,21 +5,9 @@
       */
 ?>
 
-<ul class="rslides">
-    <li><?php echo $this->Html->image('haas.jpg', array('alt' => 'Haas'))?></li>
-    <li><?php echo $this->Html->image('haaslol.jpg', array('alt' => 'Haas Lol'))?></li>
-</ul>
 
-<hr class="content-separator">
+<div class="sixteen columns backdrop">
 
-<div class="three columns offset-by-one">
-	<?php foreach ($staff as $s): ?>
-        <?php echo $this->Html->link($s['Staff']['name'], array('action' => 'view', $s['Staff']['id'])) ?>
-        <hr>
-    <?php endforeach; ?>    
-</div>
-
-<div class="ten columns offset-by-two">
     <span class="content-header"><h1>Faculty and Staff</h1></span>
     <p>The Department of Art & Design includes full-time faculty, part-time faculty, visiting artists, educators, and designers. In this particular department, there are 18 members in the team. They have helped shape the curriculum into a vehicle for training students to function in the professional fields they choose. Their teaching is informed and influenced by the hurdles they face in their own creative work, and students benefit from the expertise that comes with finding creative solutions to those struggles.</p>
 
@@ -41,5 +29,23 @@
     <br/>
 
     </p>    
+
+</div>
+
+<hr class="content-separator">
+
+<?php foreach ($staff as $s): ?>
+    <div class="four columns">
+        
+        <?php echo $this->Html->link(
+            $this->Html->image($s['Staff']['image_path'], array('height' => '150px', 'width' => '150px')),
+            array('action' => 'view', $s['Staff']['id']),
+            array('escape' => false)) ?>
+        
+        <h4><?php echo $this->Html->link($s['Staff']['name'], array('action' => 'view', $s['Staff']['id'])) ?> 
+        <h5><?php echo $s['Staff']['title']?></h5>
+    
+    </div>        
+<?php endforeach; ?>    
 
 </div>

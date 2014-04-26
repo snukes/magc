@@ -36,6 +36,53 @@ echo $this->Html->css('style');
 echo $this->Html->css('header');
 ?>
 
+<?php 
+$active=$this->request->here; 
+
+$homelink = array($this->Html->url('/'), $this->Html->url('/alumni'), $this->Html->url('/field_trips'), $this->Html->url('/student_orgs'), $this->Html->url('/facilities'));
+$home = false;
+
+foreach ($homelink as $h) {
+    if($h == $active)
+        $home = true;
+}
+
+$aplink = array($this->Html->url('/academic_programs'), $this->Html->url('/programs/view/*'));
+$ap = false;
+
+foreach ($aplink as $apl) {
+    if($apl == $active)
+        $ap = true;
+}
+
+$faslink = array($this->Html->url('/faculty_and_staff'), $this->Html->url('/staff/view/*'));
+$fas = false;
+
+foreach ($faslink as $fasl) {
+    if($fasl == $active)
+        $fas = true;
+}
+
+
+$fglink = array($this->Html->url('/foster_gallery'));
+$fg = false;
+
+foreach ($fglink as $fgl) {
+    if($fgl == $active)
+        $fg = true;
+}
+
+
+$swlink = array($this->Html->url('/student_works'));
+$sw = false;
+
+foreach ($swlink as $swl) {
+    if($swl == $active)
+        $sw = true;
+}
+
+?>
+
     <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js">			        </script>
     <![endif]-->
@@ -61,14 +108,15 @@ echo $this->Html->css('header');
                         <hr>
                     <nav class="cl-effect-1">
                         <ul id="main-menu">
-                            <li class="current-menu-item first"><a href="/">Home</a></li>
-                            <li class="nav-expand"><a href="/academic_programs">Academic Programs</a></li>
-                            <li class="nav-shrink"><a href="/academic_programs">Programs</a></li>
-                            <li class="nav-expand"><a href="/faculty_and_staff">Faculty and Staff</a></li>
-                            <li class="nav-shrink"><a href="/faculty_and_staff">Faculty</a></li>
-                            <li class="nav-expand"><a href="/foster_gallery">Foster Gallery</a></li>
-                            <li class="nav-shrink"><a href="/foster_gallery">Gallery</a></li>
-                            <li class="last"><a href="/student_works">Student Works</a></li> 
+                        <li class="<?php if ($home) {echo 'current-menu-item';} ?> first"><a href="/">Home</a></li>
+                            <li class="<?php if($ap) {echo 'current-menu-item';} ?> nav-expand"><a href="/academic_programs">Academic Programs</a></li>
+                            <li class="<?php if($ap) {echo 'current-menu-item';} ?> nav-shrink"><a href="/academic_programs">Programs</a></li>
+                            <li class="<?php if($fas) {echo 'current-menu-item';} ?> nav-expand"><a href="/faculty_and_staff">Faculty and Staff</a></li>
+                            <li class="<?php if($fas) {echo 'current-menu-item';} ?> nav-shrink"><a href="/faculty_and_staff">Faculty</a></li>
+                            <li class="<?php if($fg) {echo 'current-menu-item';} ?> nav-expand"><a href="/foster_gallery">Foster Gallery</a></li>
+                            <li class="<?php if($fg) {echo 'current-menu-item';} ?>
+nav-shrink"><a href="/foster_gallery">Gallery</a></li>
+                            <li class="<?php if($sw) {echo 'current-menu-item';} ?> last"><a href="/student_works">Student Works</a></li> 
                         </ul>  
                     </nav>
                </div>   
@@ -84,7 +132,48 @@ echo $this->Html->css('header');
             <div class="footer">
                 <div class="sixteen columns">Art and Design • Haas Fine Arts Center 104 • University of Wisconsin-Eau Claire<br />Eau Claire WI 54702-4004 <br /><br />
 Phone: 715-836-3277<br />Questions/Comments: art@uwec.edu<br /><br />
-Copyright © 2014 UW-Eau Claire and the Board of Regents of the University of Wisconsin System</div>
+Copyright © 2014 UW-Eau Claire and the Board of Regents of the University of Wisconsin System<br /><br />
+                 <?php
+                 if ($this->Session->read('Auth')) {
+                     echo $this->Html->link('Logout', array(
+                                            'plugin' => 'users',
+                                            'controller'=>'users',
+                                            'action'=>'logout'));
+                 } else {
+                     echo $this->Html->link('Login/Sign-Up', array(
+                                            'plugin' => 'users',
+                                            'controller'=>'users',
+                                            'action'=>'login'));
+                 }
+                 ?>
+
+             <?php if (isset($userData['is_admin']) && $userData['is_admin'] == 1): ?>
+             <span style="float:right;">
+                <p>
+                     Admin:&nbsp;
+                     <?php echo $this->Html->link(__('Users'), array(
+                         'admin' => true,
+                         'plugin' => 'users',
+                         'controller' => 'users',
+                         'action' => 'admin_index'));
+                     ?>
+                     &nbsp;|&nbsp;
+                    <?php echo $this->Html->link(__('Staff'), array(
+                         'admin' => true,
+                         'controller' => 'staffs',
+                         'action' => 'admin_index'));
+                     ?>
+                     &nbsp;|&nbsp;
+                     <?php echo $this->Html->link(__('Programs'), array(
+                         'admin' => true,
+                         'controller' => 'programs',
+                        'action' => 'admin_index'));
+                     ?>
+                 </p>
+             </span>
+             <?php endif; ?>
+
+                </div>
             </div>
         </div> <!-- end footer -->
 
