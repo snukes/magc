@@ -9,6 +9,10 @@
  * @license MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 ?>
+<div class="three columns offset-by-one">
+    <?php echo $this->element('Users.Users/sidebar'); ?>
+</div>
+
 <div class="users view">
 <h2><?php echo __d('users', 'User'); ?></h2>
 	<dl><?php $i = 0; $class = ' class="altrow"';?>
@@ -34,4 +38,3 @@
 		?>
 	</dl>
 </div>
-<?php echo $this->element('Users.Users/sidebar'); ?>

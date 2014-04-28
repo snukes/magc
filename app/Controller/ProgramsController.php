@@ -72,9 +72,8 @@ class ProgramsController extends AppController {
  * admin_index method
  */
 	public function admin_index() {
-		$this->Program->recursive = 0;
-		$this->set('programs', $this->paginate());
-	}
+		$this->set('programs', $this->Program->find('all'));
+    }
 
 /**
  * admin_view method

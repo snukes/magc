@@ -9,7 +9,10 @@
  * @license MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 ?>
-<div class="users index">
+<div class="three columns offset-by-one">
+    <?php echo $this->element('admin_sidebar'); ?>
+</div>
+<div class="ten columns offset-by-two">
 	<h2><?php echo __d('users', 'Users'); ?></h2>
 
 	<h3><?php echo __d('users', 'Filter'); ?></h3>
@@ -65,4 +68,3 @@
 	</table>
 	<?php echo $this->element('Users.pagination'); ?>
 </div>
-<?php echo $this->element('admin_sidebar'); ?>

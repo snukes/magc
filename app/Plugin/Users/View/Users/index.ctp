@@ -9,16 +9,14 @@
  * @license MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 ?>
-<div class="users index">
+<div class="three columns offset-by-one">
+    <?php echo $this->element('Users.Users/sidebar'); ?>
+</div>
+
+<div class="ten columns offset-by-two">
 	<h2><?php echo __d('users', 'Users'); ?></h2>
 
-	<p><?php
-	echo $this->Paginator->counter(array(
-		'format' => __d('users', 'Page %page% of %pages%, showing %current% records out of %count% total, starting on record %start%, ending on %end%')
-	));
-	?></p>
-
-	<table cellpadding="0" cellspacing="0">
+	<table >
 	<tr>
 		<th><?php echo $this->Paginator->sort('username'); ?></th>
 		<th><?php echo $this->Paginator->sort('created'); ?></th>
@@ -43,4 +41,3 @@
 	</table>
 	<?php echo $this->element('Users.pagination'); ?>
 </div>
-<?php echo $this->element('Users.Users/sidebar'); ?>

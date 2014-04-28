@@ -159,15 +159,17 @@ Copyright © 2014 UW-Eau Claire and the Board of Regents of the University of Wi
                      ?>
                      &nbsp;|&nbsp;
                     <?php echo $this->Html->link(__('Staff'), array(
+                         'plugin' => false,
                          'admin' => true,
                          'controller' => 'staffs',
                          'action' => 'admin_index'));
                      ?>
                      &nbsp;|&nbsp;
                      <?php echo $this->Html->link(__('Programs'), array(
+                         'plugin' => false,
                          'admin' => true,
                          'controller' => 'programs',
-                        'action' => 'admin_index'));
+                         'action' => 'admin_index'));
                      ?>
                  </p>
              </span>

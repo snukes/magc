@@ -9,7 +9,12 @@
  * @license MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 ?>
-<div class="users index">
+<div class="three columns offset-by-one">
+    <?php echo $this->element('Users.Users/sidebar'); ?>
+</div>
+
+
+<div class="ten columns offset-by-two">
 	<h2><?php echo __d('users', 'Login'); ?></h2>
 	<?php echo $this->Session->flash('auth');?>
 	<fieldset>
@@ -22,7 +27,6 @@
 			echo $this->Form->input('password',  array(
 				'label' => __d('users', 'Password')));
 
-			echo '<p>' . $this->Form->input('remember_me', array('type' => 'checkbox', 'label' =>  __d('users', 'Remember Me'))) . '</p>';
 			echo '<p>' . $this->Html->link(__d('users', 'I forgot my password'), array('action' => 'reset_password')) . '</p>';
 
 			echo $this->Form->hidden('User.return_to', array(
@@ -31,4 +35,3 @@
 		?>
 	</fieldset>
 </div>
-<?php echo $this->element('Users.Users/sidebar'); ?>

@@ -1,4 +1,8 @@
-<div class="program view">
+<div class="three columns offset-by-one">
+    <?php echo $this->element('admin_sidebar'); ?>
+</div>
+
+<div class="ten columns offset-by-two">
 <h2><?php  echo __('Program'); ?></h2>
 <p><?php echo $this->Html->link(__('Edit Program'), array(
             'admin' => 'true',
@@ -36,4 +40,3 @@
     </tr>
 </table>
 </div>
-<?php echo $this->element('admin_sidebar'); ?>

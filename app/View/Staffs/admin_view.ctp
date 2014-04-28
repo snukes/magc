@@ -1,5 +1,10 @@
-<div class="staff view">
-<h2><?php  echo __('Staff'); ?></h2>
+<div class="three columns offset-by-one">
+    <?php echo $this->element('admin_sidebar'); ?>
+</div>
+
+
+<div class="ten columns offset-by-two">
+<h1>Staff</h1>
 <p><?php echo $this->Html->link(__('Edit Staff'), array(
             'admin' => 'true',
             'action' => 'admin_edit', 
@@ -61,4 +66,3 @@
     </tr>
 </table>
 </div>
-<?php echo $this->element('admin_sidebar'); ?>

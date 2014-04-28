@@ -9,7 +9,11 @@
  * @license MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 ?>
-<div class="users form">
+<div class="three columns offset-by-one">
+    <?php echo $this->element('Users.Users/sidebar'); ?>
+</div>
+
+<div class="ten columns offset-by-two">
 	<?php echo $this->Form->create($model); ?>
 		<fieldset>
 			<legend><?php echo __d('users', 'Edit User'); ?></legend>
@@ -24,4 +28,3 @@
 		</fieldset>
 	<?php echo $this->Form->end(__d('users', 'Submit')); ?>
 </div>
-<?php echo $this->element('Users.Users/sidebar'); ?>

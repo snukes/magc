@@ -72,8 +72,7 @@ class StaffsController extends AppController {
  * admin_index method
  */
 	public function admin_index() {
-		$this->Staff->recursive = 0;
-		$this->set('staff', $this->paginate());
+		$this->set('staff', $this->Staff->find('all'));
 	}
 
 /**

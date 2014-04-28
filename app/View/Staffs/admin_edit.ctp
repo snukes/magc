@@ -1,4 +1,8 @@
-<div class="staffs form">
+<div class="three columns offset-by-one">
+    <?php echo $this->element('admin_sidebar'); ?>
+</div>
+
+<div class="ten columns offset-by-two">
 <?php echo $this->Form->create('Staff'); ?>
 	<fieldset>
 		<legend><?php echo __('Admin Edit Staff'); ?></legend>
@@ -17,4 +21,3 @@
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>
 </div>
-<?php echo $this->element('admin_sidebar'); ?>
