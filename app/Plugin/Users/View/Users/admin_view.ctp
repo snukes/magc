@@ -9,7 +9,11 @@
  * @license MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 ?>
-<div class="users view">
+<div class="three columns offset-by-one">
+    <?php echo $this->element('admin_sidebar'); ?>
+</div>
+
+<div class="ten columns offset-by-two">
 	<h2><?php echo __d('users', 'User'); ?></h2>
 	<dl><?php $i = 0; $class = ' class="altrow"'; ?>
 		<dt<?php if ($i % 2 == 0) echo $class; ?>><?php echo __d('users', 'Username'); ?></dt>
@@ -29,4 +33,3 @@
 		</dd>
 	</dl>
 </div>
-<?php echo $this->element('admin_sidebar'); ?>
