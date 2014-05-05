@@ -38,7 +38,7 @@
     <div class="four columns">
         
         <?php echo $this->Html->link(
-            $this->Html->image($s['Staff']['image_path'], array('height' => '150px', 'width' => '150px')),
+            $this->Html->image($s['Staff']['image_path'], array('height' => '150px', 'width' => '150px', 'alt' => $s['Staff']['name'])),
             array('action' => 'view', $s['Staff']['id']),
             array('escape' => false)) ?>
         

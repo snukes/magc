@@ -100,8 +100,8 @@ foreach ($swlink as $swl) {
                         <div id="title">
                         <h1 class="headerText">Art & Design</h1>
                         <a href="#" id="mobile-nav-button">
-                            <?php echo $this->Html->image('burger.png', array('id' => 'dark-menu','width' => '25px', 'height' => '25px'))?>
-                            <?php echo $this->Html->image('burger_white.png', array('id' => 'light-menu','width' => '25px', 'height' => '25px'))?>
+                            <?php echo $this->Html->image('burger.png', array('id' => 'dark-menu','width' => '25px', 'height' => '25px', 'alt' => 'menu'))?>
+                            <?php echo $this->Html->image('burger_white.png', array('id' => 'light-menu','width' => '25px', 'height' => '25px', 'alt' => 'menu'))?>
                         </a>
                     </div>                    
 
@@ -113,9 +113,8 @@ foreach ($swlink as $swl) {
                             <li class="<?php if($ap) {echo 'current-menu-item';} ?> nav-shrink"><a href="/academic_programs">Programs</a></li>
                             <li class="<?php if($fas) {echo 'current-menu-item';} ?> nav-expand"><a href="/faculty_and_staff">Faculty and Staff</a></li>
                             <li class="<?php if($fas) {echo 'current-menu-item';} ?> nav-shrink"><a href="/faculty_and_staff">Faculty</a></li>
-                            <li class="<?php if($fg) {echo 'current-menu-item';} ?> nav-expand"><a href="/foster_gallery">Foster Gallery</a></li>
-                            <li class="<?php if($fg) {echo 'current-menu-item';} ?>
-nav-shrink"><a href="/foster_gallery">Gallery</a></li>
+                            <li class="<?php if($fg) {echo 'current-menu-item';} ?> nav-expand"><a href="http://www.uwec.edu/Art/foster/" target="_blank">Foster Gallery</a></li>
+                            <li class="<?php if($fg) {echo 'current-menu-item';} ?> nav-shrink"><a href="http://www.uwec.edu/Art/foster/" target="_blank">Gallery</a></li>
                             <li class="<?php if($sw) {echo 'current-menu-item';} ?> last"><a href="/student_works">Student Works</a></li> 
                         </ul>  
                     </nav>
@@ -148,7 +147,7 @@ Copyright © 2014 UW-Eau Claire and the Board of Regents of the University of Wi
                  ?>
 
              <?php if (isset($userData['is_admin']) && $userData['is_admin'] == 1): ?>
-             <span style="float:right;">
+             <span>
                 <p>
                      Admin:&nbsp;
                      <?php echo $this->Html->link(__('Users'), array(

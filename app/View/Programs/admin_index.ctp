@@ -11,7 +11,6 @@
 			<th>Image Path</th>
 			<th>Faculty Contact</th>
 			<th>Catalog Points</th>
-			<th>Description</th>
 			<th class="actions">Actions</th>
 	</tr>
 	<?php
@@ -22,7 +21,6 @@
 		<td><?php echo h($program['Program']['image_path']); ?></td>
 		<td><?php echo h($program['Program']['faculty_contact']); ?></td>
 		<td><?php echo h($program['Program']['catalog_page']); ?></td>
-		<td><?php echo h($program['Program']['description']); ?></td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'admin_view', $program['Program']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'admin_edit', $program['Program']['id'])); ?>

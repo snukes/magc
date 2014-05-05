@@ -5,13 +5,6 @@
       */
 ?>
 
-<ul class="rslides">
-    <li><?php echo $this->Html->image('haas.jpg', array('alt' => 'Haas'))?></li>
-    <li><?php echo $this->Html->image('haaslol.jpg', array('alt' => 'Haas Lol'))?></li>
-</ul>
-
-<hr class="content-separator">
-
 <div class="three columns offset-by-one">
 	<?php foreach ($staffs as $s): ?>
         <?php 
@@ -26,10 +19,10 @@
 </div>
 
 <div class="ten columns offset-by-two">
-    <span class="content-header">
-        <h1><?php echo $staff['Staff']['name'] ?></h1>
-        <h2><?php echo $staff['Staff']['title'] ?></h1>
-    </span>
+    <h1><?php echo $staff['Staff']['name'] ?></h1>
+    <hr>
+    
+    
     <p>
     Office: <?php echo $staff['Staff']['office'] ?><br/>
     Phone: <?php echo $staff['Staff']['phone'] ?><br/>
