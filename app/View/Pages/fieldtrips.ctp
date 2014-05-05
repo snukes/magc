@@ -33,7 +33,7 @@ App::uses('Debugger', 'Utility');
     <hr/>
 </div>
 
-<div class="ten columns offset-by-two">
+<div class="thirteen columns offset-by-one">
     <span class="content-header"><h1>Field Trips</h1></span>
     <p>The Department of Art & Design sponsors annual field trips under faculty supervision to the Twin Cities, Chicago, and New York. These non-required trips offer students an opportunity to visit some of the nation's finest museums and private galleries.</p>
     <p>The trips are non-profit events to create the opportunity to travel in the least expensive and most direct means to destinations significant for their art museums, galleries, and other art venues. Dependable local companies provide the motor coaches for transportation. Leaders select the hotels, when applicable, based on location, safety, quality, and price. It is not a guided tour. The leaders distribute advice for planning at the organizational meetings before the trip and at the beginning of the trip in the form of a brochure containing the leaders' daily itineraries, maps, and suggestions for food, drink, and art-related events.</p>

@@ -24,7 +24,7 @@ App::uses('Debugger', 'Utility');
     <hr/>
 </div>
 
-<div class="ten columns offset-by-two">
+<div class="thirteen columns offset-by-one">
     <span class="content-header"><h1>Student Works</h1></span>
     <p>Our programs advance the university’s mission and its Liberal Education learning goals. Our diverse and inclusive curriculum in the visual arts promotes a body of knowledge that serves individual needs, stimulates the eyes, and challenges the minds of all our students. To support our contemporary and comprehensive visual arts program, we endorse these requirements:</p>
 </div>

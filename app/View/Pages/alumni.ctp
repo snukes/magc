@@ -33,7 +33,7 @@ App::uses('Debugger', 'Utility');
     <hr/>
 </div>
 
-<div class="ten columns offset-by-two">
+<div class="thirteen columns offset-by-one">
     <span class="content-header"><h1>Alumni</h1></span>
     <p>The university <a href="http://www.uwec.edu/alumni/">Alumni Association</a> promotes student leadership on campus and sponsors scholarships, awards and an array of cultural, entertainment and travel activities. The Ask An Alum and Friends Program is putting students in touch with alumni for help with careers and resettling into new communities. Major events include Alumni Day, Homecoming, and special events throughout the year in various locations where UW-Eau Claire alumni live.</p>    
 </div>
