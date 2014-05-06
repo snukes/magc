@@ -33,9 +33,9 @@
 </div>
 
 <hr class="content-separator">
-
+<div class="staff-index-wrapper">
 <?php foreach ($staff as $s): ?>
-    <div class="four columns">
+    <div class="three columns">
         
         <?php echo $this->Html->link(
             $this->Html->image($s['Staff']['image_path'], array('height' => '150px', 'width' => '150px', 'alt' => $s['Staff']['name'])),
@@ -47,5 +47,5 @@
     
     </div>        
 <?php endforeach; ?>    
-
+</div>
 </div>

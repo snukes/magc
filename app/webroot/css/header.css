@@ -116,9 +116,6 @@
 
 
 	/* Content Styles */
-	.three.columns, .ten.columns {
-		padding: 0 15px;
-	}
 	.content-header {
 		text-align: center;
 	}

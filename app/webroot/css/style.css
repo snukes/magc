@@ -2,91 +2,91 @@
 /* CSS Document*/
 
 body{
-	background: #F8F8FF;
-	color: #FFFFFF;
+    background: #F8F8FF;
+    color: #FFFFFF;
 }
 
 .wrap {
-	margin-top:200px;
+    margin-top:200px;
 }
 
 .container {
-	background-color:#FFF;
-	overflow:hidden;
+    background-color:#FFF;
+    overflow:hidden;
 }
 
 /* Header Styles */
 .header {
-	position:fixed;
-	z-index: 1000;
-	top:0;
-	height:200px;
-	background-color: #FFF;
-	
-	overflow: hidden;
+    position:fixed;
+    z-index: 1000;
+    top:0;
+    height:200px;
+    background-color: #FFF;
+
+    overflow: hidden;
     -webkit-transition: height 0.3s;
     -moz-transition: height 0.3s;
     transition: height 0.3s;
 
 }
 .accentWrapper{
-	height: 30px;
-	background: #C0C0C0;
-	width: 100%;
+    height: 30px;
+    background: #C0C0C0;
+    width: 100%;
 }
 .accent{
-	font-family: "roboto";
-	font-weight: 900;
-	font-size: 12px;
-	color: #f8f8ff;
-	letter-spacing: 5px;
-	margin: 0 auto;
-	padding: 5px 15px 5px 15px;
-	overflow: hidden;
-	line-height: 21px;
+    font-family: "roboto";
+    font-weight: 900;
+    font-size: 12px;
+    color: #f8f8ff;
+    letter-spacing: 5px;
+    margin: 0 auto;
+    padding: 5px 15px 5px 15px;
+    overflow: hidden;
+    line-height: 21px;
 }
 .banner{
-	margin: 0 auto;
-	padding: 0;
-	overflow: hidden;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
 }
 .headerText{
-	font-family: "roboto slab";
-	font-weight: 300;
-	font-size: 48px;
-	color: #666;
-	line-height:21px;
+    font-family: "roboto slab";
+    font-weight: 300;
+    font-size: 48px;
+    color: #666;
+    line-height:21px;
 
-	padding:35px 0 10px 20px;
-	display: inline-block;
+    padding:35px 0 10px 20px;
+    display: inline-block;
 }
 .logo{
-	float: left;
-	padding:15px 0 10px 20px;
+    float: left;
+    padding:15px 0 10px 20px;
 }
 #mobile-nav-button {
-  	position: relative;
-  	float: right;
-  	text-decoration: none;
-  	margin-right: 15px;
-	display: none;		
+    position: relative;
+    float: right;
+    text-decoration: none;
+    margin-right: 15px;
+    display: none;		
 }
-#mobile-nav-button #dark-menu{
-	opacity: 0.8;
-  	margin-top: 22px;
+#mobile-nav-button #dark-menu {
+    opacity: 0.8;
+    margin-top: 22px;
 }
 #mobile-nav-button #light-menu {
-	display: none;
-  	margin-top: 17px;
+    display: none;
+    margin-top: 17px;
 }
 .headerText, .logo, nav ul li a{
-	-webkit-transition: all 0.1s;
+    -webkit-transition: all 0.1s;
     -moz-transition: all 0.1s;
     transition: all 0.1s;
 }
 .header.header-shrink {
     height: 75px;
-	background-color:#c7c7c7;
+    background-color:#c7c7c7;
 }
 .header.header-shrink .accentWrapper,
 .header.header-shrink  hr{
@@ -94,37 +94,37 @@ body{
 }
 .header.header-shrink  .headerText{
     font-size:25px;
-	color:#FFF;
+    color:#FFF;
 }
 .header.header-shrink nav,
 .header.header-shrink #title {
     display:inline;
-	float:left;
+    float:left;
 }
 .header.header-shrink .headerText {
-	padding:25px 0 10px 20px;
+    padding:25px 0 10px 20px;
 }
 .header.header-shrink #mobile-nav-button #dark-menu {
-	display: none;
+    display: none;
 }
 .header.header-shrink #mobile-nav-button #light-menu {
-	display: inline-block;
+    display: inline-block;
 }
 .header.header-shrink  nav{
-	margin-left:25px;
+    margin-left:25px;
 }
 .header.header-shrink  nav ul li{
-	margin-top: 31px;
-	margin-bottom: 20px;
+    margin-top: 31px;
+    margin-bottom: 20px;
 }
 .header.header-shrink  .logo{
-	display:none;
+    display:none;
 }
 .header.header-shrink .nav-shrink {
-	display: inline;
+    display: inline;
 }
 .header.header-shrink .nav-expand {
-	display: none;
+    display: none;
 }
 
 /* End Header */
@@ -135,14 +135,128 @@ body{
 
 /** Sidebar **/
 .content hr {
-	margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 h1 {
-	font-size: 36px;
+    font-size: 36px;
 }
-.content .thirteen.columns ul {
-	list-style-type: circle;
-	padding-left: 25px;
+.content .twelve.columns ul {
+    list-style-type: circle;
+    padding-left: 25px;
+}
+
+
+
+/* Staff pages */
+.staff-index-wrapper h4 {
+    line-height: 12px;
+    font-size: 16px;
+}
+
+.staff-index-wrapper h4 a {
+    text-decoration: none;
+}
+
+.staff-index-wrapper h5 {
+    color: #808080;
+    font-size: 12px;
+}
+
+.staff-index-wrapper .three.columns {
+    height: 250px;
+    width: 150px;
+}
+
+
+.content #basic-info p {
+    margin: 0;
+    font-weight: 500;
+}
+
+.content #basic-info .contact-header{
+    padding-top: 20px;
+}
+
+.content #bio-title,
+.content #staff-image {
+    width: 150px;
+    margin-right: 15px;
+}
+
+.content #basic-info,
+.content #bio-desc,
+.content #staff-image,
+.content #bio-title {
+    display: inline;
+    float:left;
+    margin-bottom: 20px;
+}
+
+.single.staff h5 {
+    color: #C0C0C0;
+    font-size: 12px;
+}
+
+.single.staff a:link, .single.staff a:visited, .single.staff a:active{
+    color: #e5c95b;
+    text-decoration: none;
+}
+.single.staff a:hover {
+    color: #efc313;
+}
+
+@media only screen and (min-width: 960px) {
+    .content #bio-desc {
+        width: 475px;
+    }
+    .staff-index-wrapper {
+        padding: 0 55px;
+    }
+}
+
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {
+    .content #bio-desc {
+        width: 343px;
+    }
+}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    .staff-index-wrapper {
+        padding: 0 44px;
+    }
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+    .three.columns, .twelve.columns {
+        padding: 0 15px;
+    }
+    .content #bio-desc {
+        width: 270px;
+    }
+    .staff-index-wrapper {
+        padding: 0 30px;
+    }
+    .staff-index-wrapper .three.columns {
+        margin: 0 15px;
+    }
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+    .staff-index-wrapper {
+        padding: 0 60px;
+    }
+    .staff-index-wrapper .three.columns {
+        padding: 0;
+    }
 }
 
 
@@ -151,31 +265,31 @@ h1 {
 /* Footer */
 
 .footer {
-	text-align: center;
-	font-family: "roboto";
-	line-height: 10pt;
+    text-align: center;
+    font-family: "roboto";
+    line-height: 10pt;
 }
 
 /** End Footer **/
 .content{
-	font-family: "roboto slab";
-	font-weight: 300;
-	background-color: #FFF;
-	color: #000000;
-	overflow: hidden;
+    font-family: "roboto slab";
+    font-weight: 300;
+    background-color: #FFF;
+    color: #000000;
+    overflow: hidden;
 }
 
 .content-separator {
-	margin: 15px 0 20px;
+    margin: 15px 0 20px;
 }
 
 .txtPadding{
-	padding-left: 15px;
-	padding-top: 10px;
+    padding-left: 15px;
+    padding-top: 10px;
 }
 
 .ten.columns {
-	margin-bottom: 50px;
+    margin-bottom: 50px;
 }
 
 /* End Content */
@@ -183,51 +297,51 @@ h1 {
 
 
 .footerWrapper{
-	position: relative;
-	height: auto;
-	background-color: #222;
+    position: relative;
+    height: auto;
+    background-color: #222;
 }
 .footer{
-	position: relative;
-	font-family: serif;
-	font-size: 12px;
-	letter-spacing: 2px;
-	margin: 0 auto;
-	padding: 35px 0;
-	overflow: hidden;
-	width: 100%;	
+    position: relative;
+    font-family: serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin: 0 auto;
+    padding: 35px 0;
+    overflow: hidden;
+    width: 100%;	
 }
 .footer .sixteen.columns {
-	margin: 0;
+    margin: 0;
 }
 .rslides {
-  position: relative;
-  list-style: none;
-  overflow: hidden;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  }
+    position: relative;
+    list-style: none;
+    overflow: hidden;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
 
 .rslides li {
-  -webkit-backface-visibility: hidden;
-  position: absolute;
-  display: none;
-  width: 100%;
-  left: 0;
-  top: 0;
-  }
+    -webkit-backface-visibility: hidden;
+    position: absolute;
+    display: none;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
 
 .rslides li:first-child {
-  position: relative;
-  display: block;
-  float: left;
-  }
+    position: relative;
+    display: block;
+    float: left;
+}
 
 .rslides img {
-  display: block;
-  height: auto;
-  float: left;
-  width: 100%;
-  border: 0;
-  }
+    display: block;
+    height: auto;
+    float: left;
+    width: 100%;
+    border: 0;
+}
