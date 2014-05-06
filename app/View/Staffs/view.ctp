@@ -18,7 +18,7 @@
     <?php endforeach; ?>    
 </div>
 
-<div class="thirteen columns offset-by-one">
+<div class="twelve columns offset-by-one">
     <h1><?php echo $staff['Staff']['name'] ?></h1>
     <hr>
     

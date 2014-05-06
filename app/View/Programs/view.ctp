@@ -25,7 +25,7 @@
     <?php endforeach; ?>    
 </div>
 
-<div class="thirteen columns offset-by-one">
+<div class="twelve columns offset-by-one">
     <span class="content-header"><h1><?php echo $program['Program']['name'] ?></h1></span>
     <p><?php echo $program['Program']['description'] ?></p>
     <p>For further information of the specific field, please contact the faculty member: <?php echo $program['Program']['faculty_contact'] ?></p>

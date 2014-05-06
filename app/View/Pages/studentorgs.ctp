@@ -33,7 +33,7 @@ App::uses('Debugger', 'Utility');
     <hr/>
 </div>
 
-<div class="thirteen columns offset-by-one">
+<div class="twelve columns offset-by-one">
     <span class="content-header"><h1>Student Organizations</h1></span>
     <h2><a href="http://uwec.orgsync.com/">Art Educators Club</a></h2>
     <p>The Art Educators Club is open to all Art Education Majors and any individuals interested in art education and volunteer art related activities. There are many advantages to being a member of the Art Educators Club:</p>
