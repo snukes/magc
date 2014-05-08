@@ -20,6 +20,8 @@
   ================================================== -->
 <?php 
 echo $this->Html->script('jquery-1.8.3.min.js');
+echo $this->Html->script('lightbox/jquery-1.11.0.min');
+echo $this->Html->script('lightbox/lightbox.min.js');
 echo $this->Html->script('responsiveslides.min');
 echo $this->Html->script('responsiveslides');
 echo $this->Html->script('navbar');
@@ -34,6 +36,7 @@ echo $this->Html->css('menu');
 echo $this->Html->css('font-awesome');
 echo $this->Html->css('style');
 echo $this->Html->css('header');
+echo $this->Html->css('lightbox.css');
 ?>
 
 <?php 

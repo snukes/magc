@@ -205,6 +205,10 @@ h1 {
     color: #efc313;
 }
 
+.studentworks {
+    margin-bottom: 50px;
+}
+
 @media only screen and (min-width: 960px) {
     .content #bio-desc {
         width: 475px;
@@ -219,12 +223,18 @@ h1 {
     .content #bio-desc {
         width: 343px;
     }
+    .studentworks {
+        padding: 0 3px;
+    }
 }
 
 /* Tablet Portrait size to standard 960 (devices and browsers) */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
     .staff-index-wrapper {
         padding: 0 44px;
+    }
+    .studentworks {
+        padding: 0 23px;
     }
 }
 
@@ -242,6 +252,9 @@ h1 {
     .staff-index-wrapper .three.columns {
         margin: 0 15px;
     }
+    .studentworks {
+        padding: 0 16px;
+    }
 }
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
@@ -256,6 +269,9 @@ h1 {
     }
     .staff-index-wrapper .three.columns {
         padding: 0;
+    }
+    .studentworks {
+        padding: 0 34px;
     }
 }
 
