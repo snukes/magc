@@ -6,7 +6,7 @@
     <head>
     <!-- Basic Page Needs
     =========================================== -->
-        <title>Department of Art and Design | UW-Eau Claire</title>
+    <title><?php echo $title_for_layout;?>UWEC | Art & Design</title>
         <meta name="Description" id="Description" content="The Department of Art and Design at UW-Eau Claire">
             <meta name="Keywords" id="Keywords" content="art, design, Eau Claire, UW-Eau Claire, UWEC, University of Wisconsin-Eau Claire, liberal arts">
         <meta charset="utf-8">

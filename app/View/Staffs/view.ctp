@@ -1,9 +1,4 @@
-<?php 
-/**
- * Programs Index
- *
- */
-?>
+<?php $this->set('title_for_layout', $staff['Staff']['name'] . ' | ');?>
 
 <div class="three columns offset-by-one">
     <?php foreach ($staffs as $s): ?>

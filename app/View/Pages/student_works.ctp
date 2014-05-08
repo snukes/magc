@@ -1,16 +1,4 @@
-<?php
-/**
-* Home Page
-*
-*
-*/
-
-if (!Configure::read('debug')):
-throw new NotFoundException();
-endif;
-
-App::uses('Debugger', 'Utility');
-?>
+<?php $this->set('title_for_layout', 'Student Works | '); ?>
 
 <div class="sixteen columns studentworks">
     <span class="content-header"><h1>Student Works</h1></span>

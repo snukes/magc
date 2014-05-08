@@ -1,9 +1,4 @@
-<?php 
-    /**
-      * Programs Index
-      *
-      */
-?>
+<?php $this->set('title_for_layout', 'Academic Programs | ');?>
 
 <ul class="rslides">
     <li><?php echo $this->Html->image('haas.jpg', array('alt' => 'Haas'))?></li>

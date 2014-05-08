@@ -1,18 +1,4 @@
-<?php
-/**
- *
- *
- * @link          http://cakephp.org CakePHP(tm) Project
- * @package       app.View.Pages
- * @since         CakePHP(tm) v 0.10.0.1076
- */
-
-if (!Configure::read('debug')):
-	throw new NotFoundException();
-endif;
-
-App::uses('Debugger', 'Utility');
-?>
+<?php $this->set('title_for_layout', 'Facilities | ');?>
 <ul class="rslides">
     <li ><?php echo $this->Html->image('haas.jpg', array('alt' => 'Haas'))?></li>
     <li><?php echo $this->Html->image('haaslol.jpg', array('alt' => 'Haas Lol'))?></li>

@@ -1,16 +1,4 @@
-<?php
-/**
-* Home Page
-*
-*
-*/
-
-if (!Configure::read('debug')):
-throw new NotFoundException();
-endif;
-
-App::uses('Debugger', 'Utility');
-?>
+<?php $this->set('title_for_layout', '');?>
 
 <ul class="rslides">
     <li><?php echo $this->Html->image('haas.jpg', array('alt' => 'Haas'))?></li>

@@ -1,9 +1,4 @@
-<?php 
-    /**
-      * Programs Index
-      *
-      */
-?>
+<?php $this->set('title_for_layout', 'Faculty and Staff | '); ?>
 
 
 <div class="sixteen columns backdrop">
